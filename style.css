@@ -1,0 +1,219 @@
+/* .images,
+.images * ,
+.portada > div  {
+  background-color: rgba(0, 255, 0, 0.1);
+} */
+
+.seccion {
+  min-height: calc(100vh - var(--nav-height));
+}
+.container > * {
+  color: white;
+}
+.enlaces {
+  text-align: right;
+  justify-content: right;
+}
+/* Portada */
+
+.portada {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  cursor: none;
+}
+.portada > * {
+  cursor: none;
+  text-align: center;
+}
+.portada > div {
+  width: 1200px;
+}
+.portada > * > * {
+  position: relative;
+  z-index: -1;
+}
+
+/* Fondo portada */
+
+.images {
+  position: relative;
+  width: 100%;
+}
+.images:not(:last-child) {
+  backdrop-filter: blur(7px);
+}
+.images > * > * {
+  position: absolute;
+  opacity: 0;
+}
+.images > * {
+  overflow: hidden;
+  width: fit-content;
+}
+
+.clay {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(1, 12, 49, 0.37);
+  /* backdrop-filter: blur(1px); */
+  /* backdrop-filter: blur(10px); */
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.clay-1 {
+  top: -300px;
+  right: 25rem;
+  width: 15rem;
+  height: 15rem;
+}
+.clay-2 {
+  top: 2rem;
+  right: -3rem;
+  width: 10rem;
+  height: 10rem;
+  z-index: -1;
+}
+.images [src="img/cyber.jpg"] {
+  aspect-ratio: auto;
+  width: 30rem;
+  border-radius: 26px;
+  top: -240px;
+  right: 0;
+}
+
+/* titulo y subtitulo */
+
+.titulo-logo {
+  font-family: var(--logo);
+  font-size: 15vw;
+  text-transform: lowercase;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+}
+.efecto {
+  overflow: visible;
+  width: var(--change-width);
+  transition: width 0.15s linear;
+}
+.efecto > *:not(span) {
+  opacity: 0;
+}
+.efecto > * {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.1s forwards, blur 1s ease-out 0.1s forwards,
+    moveUp 0.6s ease-out forwards,
+    glow 2.3s 1s ease-in-out infinite
+      /* ,
+    andrewTate 0.6s ease-out forwards */;
+  display: inline-block;
+}
+
+.efecto > * > * {
+  display: inline-block;
+}
+.efecto > * > *:hover {
+  transform: scale(10);
+}
+.subtitulo {
+  opacity: 0;
+  font-size: 3vw;
+  animation: fadeIn 1s ease-out 1s forwards;
+}
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0));
+  }
+  15% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+  }
+  30% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0));
+  }
+}
+@keyframes blur {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%) rotate(0deg) scale(1);
+  }
+  1% {
+    transform: translateY(99%) rotate(45deg) scale(0.5);
+  }
+  100% {
+    transform: translateY(0%) rotate(0deg) scale(1);
+  }
+}
+
+/* Fondo portada */
+
+.images {
+  position: relative;
+}
+.images img {
+  aspect-ratio: auto;
+  position: absolute;
+  width: 30rem;
+}
+
+/* Parallax */
+/* Nuestra empresa */
+
+.nuestra-empresa {
+  background-color: white;
+  color: black;
+  font-family: var(--sin-serifa);
+  min-height: 600px;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nuestra-empresa p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* efecto mouse */
+.mouse-circulo {
+  aspect-ratio: 1/1;
+  width: 250px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(150px);
+  transform: translate(var(--pos-m-x), var(--pos-m-y));
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .titulo-logo {
+    font-size: 10rem;
+  }
+  .subtitulo {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

@@ -1,0 +1,180 @@
+nav {
+  --icono-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex !important;
+  align-items: center !important;
+}
+nav i {
+  display: inline;
+  margin: 0 10px 0 10px;
+  background-color: var(--rich);
+  font-size: var(--icono-size);
+  padding: 0.5rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+footer i {
+  background: none;
+}
+a {
+  display: flex;
+  align-items: center;
+}
+footer {
+  align-self: flex-end;
+  bottom: 0;
+}
+.seccion:nth-child(1) {
+  min-height: calc(100vh - var(--nav-height-2) - 140px);
+}
+.tablas {
+  padding: 10px 2.5rem;
+  transition: padding 0.4s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tablas > * {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid lightgray;
+  margin-bottom: 2rem;
+  /* height: fit-content; */
+  max-height: var(--table-height);
+  transition: max-height 0.5s ease-in-out;
+  background-color: var(--white);
+}
+
+.cerrado {
+  max-height: var(--h2-height);
+}
+.tablas h2 {
+  margin: 0;
+  font-size: larger;
+}
+.tablas .titulo {
+  background-color: var(--rich-black);
+  color: var(--white);
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tablas .titulo,
+.tablas .desc {
+  padding: 0.5rem 1rem;
+}
+.tablas a {
+  text-decoration: none;
+  all: unset;
+}
+.tablas .fa-table {
+  margin: 0 10px;
+  font-size: 1rem;
+  background-color: var(--rich);
+  aspect-ratio: 1/1;
+  padding: 5px;
+  border-radius: 50%;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+.tablas-buscar {
+  margin-top: 1rem;
+}
+.tablas-buscar * {
+  font-family: var(--sin-serifa);
+  font-size: 1rem;
+}
+.tablas-buscar input,
+.tablas-buscar button {
+  all: unset;
+  border-radius: 0.5rem;
+  border: 1px solid;
+
+  padding: 0.25rem;
+
+  border-color: var(--rich-black);
+}
+.tablas-buscar button {
+  background-color: var(--rich);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+.tablas-buscar button:hover {
+  background-color: var(--rich-black);
+  color: lightgray;
+}
+.despliegue {
+  text-align: right;
+  /* display: inline-flex; */
+  float: right;
+  align-items: center;
+  line-height: 0;
+  transition: transform 0.25s ease-in-out;
+}
+.girar {
+  transform: rotate(-90deg);
+}
+.boton {
+  text-decoration: underline;
+  cursor: pointer;
+  width: fit-content;
+  display: inline;
+}
+.fa-arrow-right {
+  transition: transform 0.25s ease-in-out;
+}
+.fa-arrow-left {
+  transition: transform 0.25s ease-in-out;
+}
+.flecha-hover-der {
+  transform: translateX(50%);
+}
+.flecha-hover-izq {
+  transform: translateX(-50%);
+}
+@media (min-width: 576px) {
+  .tablas {
+    padding: 15px 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tablas {
+    padding: 15px 6.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .tablas {
+    padding: 15px 8.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tablas {
+    padding: 40px 15rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .tablas {
+    padding: 40px 18rem;
+  }
+}
+@media (min-width: 1700px) {
+  .tablas {
+    padding: 40px 23rem;
+  }
+}
